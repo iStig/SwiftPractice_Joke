@@ -9,14 +9,24 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow (frame: UIScreen.mainScreen().bounds)
+        var mainViewController = JMMainViewController(nibName: nil, bundle: nil)
+        var navigationViewController = UINavigationController(rootViewController: mainViewController)
+        
+        self.window!.rootViewController = navigationViewController
+        self.window!.makeKeyAndVisible()
+        
         return true
     }
 

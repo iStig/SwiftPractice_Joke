@@ -14,6 +14,30 @@
 		621D3DAE1B74622100640B58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 621D3DAD1B74622100640B58 /* Images.xcassets */; };
 		621D3DB11B74622100640B58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 621D3DAF1B74622100640B58 /* LaunchScreen.xib */; };
 		621D3DBD1B74622100640B58 /* FirstSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621D3DBC1B74622100640B58 /* FirstSwiftTests.swift */; };
+		621D3DCA1B749F6D00640B58 /* JMMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621D3DC91B749F6D00640B58 /* JMMainViewController.swift */; };
+		621D3DD01B74A71E00640B58 /* JMAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 621D3DCE1B74A71E00640B58 /* JMAboutViewController.xib */; };
+		62E4A7451B78421A00A25A9A /* JMJokeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A7441B78421A00A25A9A /* JMJokeTableViewController.swift */; };
+		62E4A7471B784C7100A25A9A /* JMRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A7461B784C7100A25A9A /* JMRefreshView.swift */; };
+		62E4A7491B784C8600A25A9A /* JMRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62E4A7481B784C8600A25A9A /* JMRefreshView.xib */; };
+		62E4A74B1B78525200A25A9A /* JMHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A74A1B78525200A25A9A /* JMHttpRequest.swift */; };
+		62E4A74D1B7874E000A25A9A /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A74C1B7874E000A25A9A /* UIViewExt.swift */; };
+		62E4A7501B787BA800A25A9A /* JMJokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A74E1B787BA800A25A9A /* JMJokeCell.swift */; };
+		62E4A7511B787BA800A25A9A /* JMJokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62E4A74F1B787BA800A25A9A /* JMJokeCell.xib */; };
+		62E4A7531B787FC900A25A9A /* NSDictionaryExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A7521B787FC900A25A9A /* NSDictionaryExt.swift */; };
+		62E4A7551B78818000A25A9A /* NSStringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A7541B78818000A25A9A /* NSStringExt.swift */; };
+		62E4A7581B788D6D00A25A9A /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62E4A7561B788D6D00A25A9A /* avatar.jpg */; };
+		62E4A7591B788D6D00A25A9A /* me.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 62E4A7571B788D6D00A25A9A /* me.jpeg */; };
+		62E4A75B1B78904D00A25A9A /* UIImageViewWebExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A75A1B78904D00A25A9A /* UIImageViewWebExt.swift */; };
+		62E4A75D1B78983A00A25A9A /* FileUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4A75C1B78983A00A25A9A /* FileUtility.swift */; };
+		62FF23E01B79EDF700F354E4 /* JMImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF23DF1B79EDF700F354E4 /* JMImageViewController.swift */; };
+		62FF23E21B79EE6C00F354E4 /* JMImageZoomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF23E11B79EE6C00F354E4 /* JMImageZoomingView.swift */; };
+		62FF23E41B79FB1300F354E4 /* JMCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF23E31B79FB1300F354E4 /* JMCommentsViewController.swift */; };
+		62FF23E71B79FC2A00F354E4 /* JMCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF23E51B79FC2A00F354E4 /* JMCommentCell.swift */; };
+		62FF23E81B79FC2A00F354E4 /* JMCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62FF23E61B79FC2A00F354E4 /* JMCommentCell.xib */; };
+		62FF23EB1B7AEE3900F354E4 /* JMAutoResizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF23E91B7AEE3900F354E4 /* JMAutoResizeCell.swift */; };
+		62FF23EC1B7AEE3900F354E4 /* JMAutoResizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62FF23EA1B7AEE3900F354E4 /* JMAutoResizeCell.xib */; };
+		62FF23EE1B7AF33200F354E4 /* JMAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF23ED1B7AF33200F354E4 /* JMAboutViewController.swift */; };
+		62FF23F01B7AF5EE00F354E4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF23EF1B7AF5EE00F354E4 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +62,30 @@
 		621D3DB61B74622100640B58 /* FirstSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		621D3DBB1B74622100640B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		621D3DBC1B74622100640B58 /* FirstSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSwiftTests.swift; sourceTree = "<group>"; };
+		621D3DC91B749F6D00640B58 /* JMMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMMainViewController.swift; sourceTree = "<group>"; };
+		621D3DCE1B74A71E00640B58 /* JMAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMAboutViewController.xib; sourceTree = "<group>"; };
+		62E4A7441B78421A00A25A9A /* JMJokeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMJokeTableViewController.swift; sourceTree = "<group>"; };
+		62E4A7461B784C7100A25A9A /* JMRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMRefreshView.swift; sourceTree = "<group>"; };
+		62E4A7481B784C8600A25A9A /* JMRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMRefreshView.xib; sourceTree = "<group>"; };
+		62E4A74A1B78525200A25A9A /* JMHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMHttpRequest.swift; sourceTree = "<group>"; };
+		62E4A74C1B7874E000A25A9A /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		62E4A74E1B787BA800A25A9A /* JMJokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMJokeCell.swift; sourceTree = "<group>"; };
+		62E4A74F1B787BA800A25A9A /* JMJokeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMJokeCell.xib; sourceTree = "<group>"; };
+		62E4A7521B787FC900A25A9A /* NSDictionaryExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDictionaryExt.swift; sourceTree = "<group>"; };
+		62E4A7541B78818000A25A9A /* NSStringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStringExt.swift; sourceTree = "<group>"; };
+		62E4A7561B788D6D00A25A9A /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		62E4A7571B788D6D00A25A9A /* me.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me.jpeg; sourceTree = "<group>"; };
+		62E4A75A1B78904D00A25A9A /* UIImageViewWebExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewWebExt.swift; sourceTree = "<group>"; };
+		62E4A75C1B78983A00A25A9A /* FileUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtility.swift; sourceTree = "<group>"; };
+		62FF23DF1B79EDF700F354E4 /* JMImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMImageViewController.swift; sourceTree = "<group>"; };
+		62FF23E11B79EE6C00F354E4 /* JMImageZoomingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMImageZoomingView.swift; sourceTree = "<group>"; };
+		62FF23E31B79FB1300F354E4 /* JMCommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCommentsViewController.swift; sourceTree = "<group>"; };
+		62FF23E51B79FC2A00F354E4 /* JMCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCommentCell.swift; sourceTree = "<group>"; };
+		62FF23E61B79FC2A00F354E4 /* JMCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMCommentCell.xib; sourceTree = "<group>"; };
+		62FF23E91B7AEE3900F354E4 /* JMAutoResizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMAutoResizeCell.swift; sourceTree = "<group>"; };
+		62FF23EA1B7AEE3900F354E4 /* JMAutoResizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMAutoResizeCell.xib; sourceTree = "<group>"; };
+		62FF23ED1B7AF33200F354E4 /* JMAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMAboutViewController.swift; sourceTree = "<group>"; };
+		62FF23EF1B7AF5EE00F354E4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +128,33 @@
 			isa = PBXGroup;
 			children = (
 				621D3DA31B74622100640B58 /* AppDelegate.swift */,
-				621D3DA81B74622100640B58 /* ViewController.swift */,
-				621D3DAA1B74622100640B58 /* Main.storyboard */,
+				62E4A7521B787FC900A25A9A /* NSDictionaryExt.swift */,
+				62E4A7541B78818000A25A9A /* NSStringExt.swift */,
+				62E4A74C1B7874E000A25A9A /* UIViewExt.swift */,
+				62E4A75A1B78904D00A25A9A /* UIImageViewWebExt.swift */,
+				62E4A75C1B78983A00A25A9A /* FileUtility.swift */,
+				62E4A74A1B78525200A25A9A /* JMHttpRequest.swift */,
+				62E4A7461B784C7100A25A9A /* JMRefreshView.swift */,
+				62E4A7481B784C8600A25A9A /* JMRefreshView.xib */,
+				62FF23E31B79FB1300F354E4 /* JMCommentsViewController.swift */,
+				62FF23E51B79FC2A00F354E4 /* JMCommentCell.swift */,
+				62FF23E61B79FC2A00F354E4 /* JMCommentCell.xib */,
+				621D3DC91B749F6D00640B58 /* JMMainViewController.swift */,
+				62E4A7441B78421A00A25A9A /* JMJokeTableViewController.swift */,
+				62E4A74E1B787BA800A25A9A /* JMJokeCell.swift */,
+				62E4A74F1B787BA800A25A9A /* JMJokeCell.xib */,
+				62FF23ED1B7AF33200F354E4 /* JMAboutViewController.swift */,
+				621D3DCE1B74A71E00640B58 /* JMAboutViewController.xib */,
+				62FF23E91B7AEE3900F354E4 /* JMAutoResizeCell.swift */,
+				62FF23EA1B7AEE3900F354E4 /* JMAutoResizeCell.xib */,
+				62FF23EF1B7AF5EE00F354E4 /* Model.swift */,
+				62FF23DF1B79EDF700F354E4 /* JMImageViewController.swift */,
+				62FF23E11B79EE6C00F354E4 /* JMImageZoomingView.swift */,
 				621D3DAD1B74622100640B58 /* Images.xcassets */,
+				62E4A7561B788D6D00A25A9A /* avatar.jpg */,
+				62E4A7571B788D6D00A25A9A /* me.jpeg */,
 				621D3DAF1B74622100640B58 /* LaunchScreen.xib */,
+				621D3DAA1B74622100640B58 /* Main.storyboard */,
 				621D3DA51B74622100640B58 /* FirstSwift.xcdatamodeld */,
 				621D3DA11B74622100640B58 /* Supporting Files */,
 			);
@@ -93,6 +164,7 @@
 		621D3DA11B74622100640B58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				621D3DA81B74622100640B58 /* ViewController.swift */,
 				621D3DA21B74622100640B58 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -196,8 +268,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				621D3DAC1B74622100640B58 /* Main.storyboard in Resources */,
+				62E4A7581B788D6D00A25A9A /* avatar.jpg in Resources */,
 				621D3DB11B74622100640B58 /* LaunchScreen.xib in Resources */,
 				621D3DAE1B74622100640B58 /* Images.xcassets in Resources */,
+				62FF23E81B79FC2A00F354E4 /* JMCommentCell.xib in Resources */,
+				62E4A7491B784C8600A25A9A /* JMRefreshView.xib in Resources */,
+				62E4A7591B788D6D00A25A9A /* me.jpeg in Resources */,
+				621D3DD01B74A71E00640B58 /* JMAboutViewController.xib in Resources */,
+				62E4A7511B787BA800A25A9A /* JMJokeCell.xib in Resources */,
+				62FF23EC1B7AEE3900F354E4 /* JMAutoResizeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +294,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E4A74D1B7874E000A25A9A /* UIViewExt.swift in Sources */,
+				62FF23EB1B7AEE3900F354E4 /* JMAutoResizeCell.swift in Sources */,
+				62E4A7501B787BA800A25A9A /* JMJokeCell.swift in Sources */,
+				621D3DCA1B749F6D00640B58 /* JMMainViewController.swift in Sources */,
 				621D3DA91B74622100640B58 /* ViewController.swift in Sources */,
 				621D3DA71B74622100640B58 /* FirstSwift.xcdatamodeld in Sources */,
+				62E4A7531B787FC900A25A9A /* NSDictionaryExt.swift in Sources */,
+				62E4A75D1B78983A00A25A9A /* FileUtility.swift in Sources */,
+				62E4A7471B784C7100A25A9A /* JMRefreshView.swift in Sources */,
+				62FF23E01B79EDF700F354E4 /* JMImageViewController.swift in Sources */,
 				621D3DA41B74622100640B58 /* AppDelegate.swift in Sources */,
+				62FF23E71B79FC2A00F354E4 /* JMCommentCell.swift in Sources */,
+				62FF23E21B79EE6C00F354E4 /* JMImageZoomingView.swift in Sources */,
+				62E4A7551B78818000A25A9A /* NSStringExt.swift in Sources */,
+				62E4A74B1B78525200A25A9A /* JMHttpRequest.swift in Sources */,
+				62FF23F01B7AF5EE00F354E4 /* Model.swift in Sources */,
+				62FF23EE1B7AF33200F354E4 /* JMAboutViewController.swift in Sources */,
+				62E4A7451B78421A00A25A9A /* JMJokeTableViewController.swift in Sources */,
+				62E4A75B1B78904D00A25A9A /* UIImageViewWebExt.swift in Sources */,
+				62FF23E41B79FB1300F354E4 /* JMCommentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FirstSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FirstSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -413,6 +511,7 @@
 				621D3DC21B74622100640B58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		621D3DC31B74622100640B58 /* Build configuration list for PBXNativeTarget "FirstSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +520,7 @@
 				621D3DC51B74622100640B58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
