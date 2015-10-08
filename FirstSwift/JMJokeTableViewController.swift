@@ -30,18 +30,18 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func setupViews() {
-        var width = self.view.frame.size.width
-        var height = self.view.frame.size.height
+        let width = self.view.frame.size.width
+        let height = self.view.frame.size.height
         self.tableView = UITableView(frame: CGRectMake(0, 64, width, height-64-49))
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.tableView?.separatorStyle = UITableViewCellSeparatorStyle.None
         self.view.addSubview(self.tableView!)
         
-        var nib = UINib(nibName:"JMJokeCell", bundle: nil)
+        let nib = UINib(nibName:"JMJokeCell", bundle: nil)
         self.tableView?.registerNib(nib, forCellReuseIdentifier: identifier)
         
-        var arr = NSBundle.mainBundle().loadNibNamed("JMRefreshView", owner: self, options: nil) as NSArray
+        let arr = NSBundle.mainBundle().loadNibNamed("JMRefreshView", owner: self, options: nil) as NSArray
         self.refreshView = arr[0] as? JMRefreshView
         self.refreshView?.delegate = self
         self.tableView?.tableFooterView = self.refreshView
@@ -49,7 +49,7 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func loadData() {
-        var url = urlString()
+        let url = urlString()
         self.refreshView?.startLoading()
         JMHttpRequest.requestWithUrl(url, completionHandler: { data  in
             if data as! NSObject == NSNull() {
@@ -57,7 +57,7 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
                 return
             }
             
-            var arr = data["items"] as! NSArray
+            let arr = data["items"] as! NSArray
             for data:AnyObject in arr
             {
             self.dataArray.addObject(data)
@@ -91,9 +91,9 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func imageViewTapped(noti:NSNotification) {
-    var imageUrl = noti.object as! String
-    println(imageUrl)
-        var imgVC = JMImageViewController(nibName: nil, bundle: nil)
+    let imageUrl = noti.object as! String
+    print(imageUrl)
+        let imgVC = JMImageViewController(nibName: nil, bundle: nil)
         imgVC.imageUrl = imageUrl
         self.navigationController?.pushViewController(imgVC, animated: true)
     }
@@ -104,11 +104,11 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
     
     //MARK: TableViewDatasource && TableViewDelegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as? JMJokeCell
-        var index = indexPath.row
-        var data = self.dataArray[index] as! NSDictionary
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as? JMJokeCell
+        let index = indexPath.row
+        let data = self.dataArray[index] as! NSDictionary
         cell!.data = data
-        println("      index:\(index)")
+        print("      index:\(index)")
 //        cell!.setNeedsUpdateConstraints()
 //        cell!.updateConstraintsIfNeeded()
         
@@ -120,9 +120,9 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var index = indexPath.row
-        var data = self.dataArray[index] as! NSDictionary
-        var commentsVC = JMCommentsViewController(nibName :nil, bundle: nil)
+        let index = indexPath.row
+        let data = self.dataArray[index] as! NSDictionary
+        let commentsVC = JMCommentsViewController(nibName :nil, bundle: nil)
         commentsVC.jokeId = data.stringAttributeForKey("id")
         self.navigationController!.pushViewController(commentsVC, animated: true)
     }
@@ -137,14 +137,14 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
             JMSingleton.templateCell = tableView.dequeueReusableCellWithIdentifier(self.identifier) as? JMJokeCell
         })
         
-        var index = indexPath.row
-        var data = self.dataArray[index] as! NSDictionary
+        let index = indexPath.row
+        let data = self.dataArray[index] as! NSDictionary
         
         
-        var content = data.stringAttributeForKey("content")
+        let content = data.stringAttributeForKey("content")
         JMSingleton.templateCell?.contentLabel!.text = content
         
-        var imgSrc = data.stringAttributeForKey("image") as NSString
+        let imgSrc = data.stringAttributeForKey("image") as NSString
         
         
         if imgSrc.length == 0 {
@@ -156,9 +156,9 @@ class JMJokeTableViewController: UIViewController,UITableViewDelegate,UITableVie
         }
 
         
-        var tempWidthConstraint:NSLayoutConstraint! = NSLayoutConstraint(item: JMSingleton.templateCell!.contentView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGRectGetWidth(self.tableView!.bounds))
+        let tempWidthConstraint:NSLayoutConstraint! = NSLayoutConstraint(item: JMSingleton.templateCell!.contentView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGRectGetWidth(self.tableView!.bounds))
         JMSingleton.templateCell?.addConstraint(tempWidthConstraint)
-        var height:CGFloat! = JMSingleton.templateCell?.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+        let height:CGFloat! = JMSingleton.templateCell?.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
         
   
         

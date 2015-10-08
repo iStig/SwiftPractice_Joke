@@ -73,7 +73,7 @@ extension UIView {
     }
     
     class func showAlertView(title:String , message:String) {
-        var alert = UIAlertView()
+        let alert = UIAlertView()
         alert.title = title
         alert.message = message
         alert.addButtonWithTitle("好")

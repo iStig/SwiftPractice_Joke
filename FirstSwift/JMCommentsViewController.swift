@@ -27,7 +27,7 @@ class JMCommentsViewController: UIViewController,UITableViewDataSource,UITableVi
     
     
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -40,14 +40,14 @@ class JMCommentsViewController: UIViewController,UITableViewDataSource,UITableVi
     
     func setupViews()
     {
-        var width = self.view.frame.size.width
-        var height = self.view.frame.size.height
+        let width = self.view.frame.size.width
+        let height = self.view.frame.size.height
         self.tableView = UITableView(frame:CGRectMake(0,0,width,height))
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.tableView.estimatedRowHeight = 100
-        var nib = UINib(nibName:"JMCommentCell", bundle: nil)
+        let nib = UINib(nibName:"JMCommentCell", bundle: nil)
         
         self.tableView.registerNib(nib, forCellReuseIdentifier: identifier)
         
@@ -61,7 +61,7 @@ class JMCommentsViewController: UIViewController,UITableViewDataSource,UITableVi
     
     func loadData()
     {
-        var url = "http://m2.qiushibaike.com/article/\(self.jokeId)/comments?count=20&page=\(self.page)"
+        let url = "http://m2.qiushibaike.com/article/\(self.jokeId)/comments?count=20&page=\(self.page)"
         self.refreshView!.startLoading()
         JMHttpRequest.requestWithUrl(url,completionHandler:{ data in
             
@@ -71,7 +71,7 @@ class JMCommentsViewController: UIViewController,UITableViewDataSource,UITableVi
                 return
             }
             
-            var arr = data["items"] as! NSArray
+            let arr = data["items"] as! NSArray
             if arr.count  == 0
             {
                 UIView.showAlertView("提示",message:"暂无新评论哦")
@@ -104,8 +104,8 @@ class JMCommentsViewController: UIViewController,UITableViewDataSource,UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell:JMCommentCell = tableView.dequeueReusableCellWithIdentifier(identifier) as? JMCommentCell {
-            var index = indexPath.row
-            var data = self.dataArray[index] as! NSDictionary
+            let index = indexPath.row
+            let data = self.dataArray[index] as! NSDictionary
             cell.data  = data
             return cell
         }
@@ -124,16 +124,16 @@ class JMCommentsViewController: UIViewController,UITableViewDataSource,UITableVi
             JMSingleton.templateCell = tableView.dequeueReusableCellWithIdentifier(self.identifier) as? JMCommentCell
         })
         
-        var index = indexPath.row
-        var data = self.dataArray[index] as! NSDictionary
+        let index = indexPath.row
+        let data = self.dataArray[index] as! NSDictionary
         
         
-        var content = data.stringAttributeForKey("content")
+        let content = data.stringAttributeForKey("content")
         JMSingleton.templateCell?.contentLabel!.text = content
         
-        var tempWidthConstraint:NSLayoutConstraint! = NSLayoutConstraint(item: JMSingleton.templateCell!.contentView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGRectGetWidth(self.tableView!.bounds))
+        let tempWidthConstraint:NSLayoutConstraint! = NSLayoutConstraint(item: JMSingleton.templateCell!.contentView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGRectGetWidth(self.tableView!.bounds))
         JMSingleton.templateCell?.addConstraint(tempWidthConstraint)
-        var height:CGFloat! = JMSingleton.templateCell?.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+        let height:CGFloat! = JMSingleton.templateCell?.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
         return height
         
     }

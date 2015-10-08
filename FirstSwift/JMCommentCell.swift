@@ -21,21 +21,21 @@ class JMCommentCell: UITableViewCell {
     var data :NSDictionary! {
         didSet {
             
-            var user : AnyObject!  = self.data["user"]
+            let user : AnyObject!  = self.data["user"]
             
             if user as! NSObject != NSNull()
             {
-                var userDict = user as! NSDictionary
+                let userDict = user as! NSDictionary
                 self.nickLabel!.text = userDict["login"] as! NSString as String
                 
-                var icon : AnyObject! = userDict["icon"]
+                let icon : AnyObject! = userDict["icon"]
                 if icon as! NSObject != NSNull()
                 {
-                    var userIcon = icon as! String
-                    var userId =  userDict["id"] as! NSNumber
-                    var userstring: NSString = "\(userId)"
-                    var prefixUserId = userstring.substringToIndex(3)
-                    var userImageURL = "http://pic.moumentei.com/system/avtnew/\(prefixUserId)/\(userstring)/thumb/\(userIcon)"
+                    let userIcon = icon as! String
+                    let userId =  userDict["id"] as! NSNumber
+                    let userstring: NSString = "\(userId)"
+                    let prefixUserId = userstring.substringToIndex(3)
+                    let userImageURL = "http://pic.moumentei.com/system/avtnew/\(prefixUserId)/\(userstring)/thumb/\(userIcon)"
                     self.avatarView!.setImage(userImageURL,placeHolder: UIImage(named: "avatar.jpg"))
                 }
                 else
@@ -43,8 +43,8 @@ class JMCommentCell: UITableViewCell {
                     self.avatarView!.image =  UIImage(named: "avatar.jpg")
                 }
                 
-                var timeStamp = userDict.stringAttributeForKey("created_at")
-                var date = timeStamp.dateStringFromTimestamp(timeStamp)
+                let timeStamp = userDict.stringAttributeForKey("created_at")
+                let date = timeStamp.dateStringFromTimestamp(timeStamp)
                 self.dateLabel!.text = date
                 
             }
@@ -55,10 +55,10 @@ class JMCommentCell: UITableViewCell {
                 self.dateLabel!.text = ""
                 
             }
-            var content = self.data.stringAttributeForKey("content")
+            let content = self.data.stringAttributeForKey("content")
             self.contentLabel!.text = content
             
-            var floor = self.data.stringAttributeForKey("floor")
+            let floor = self.data.stringAttributeForKey("floor")
             self.floorLabel!.text = "\(floor)楼"
         }
     }

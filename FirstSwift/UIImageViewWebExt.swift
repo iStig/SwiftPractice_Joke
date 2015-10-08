@@ -29,7 +29,7 @@ extension UIImageView {
                 {
                     dispatch_async(dispatch_get_main_queue(),
                         {
-                            println(error)
+                            print(error, terminator: "")
                             self.image = placeHolder
                     })
                 }
@@ -38,14 +38,14 @@ extension UIImageView {
                     dispatch_async(dispatch_get_main_queue(),
                         {
                             
-                            var image = UIImage(data: data)
+                            var image = UIImage(data: data!)
                             if (image == nil)
                             {
-                                let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                                let jsonData = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
                                 
                                 if let err:String? = jsonData["error"] as? String {
                                     //println("\(err)")
-                                    println("url fail=\(urlString)");
+                                    print("url fail=\(urlString)");
                                 }
                                 //println("img is nil,path=\(cachePath)")
                                 self.image = placeHolder
@@ -53,10 +53,10 @@ extension UIImageView {
                             else
                             {
                                 self.image = image
-                                var bIsSuccess = FileUtility.imageCacheToPath(cachePath,image:data)
+                                var bIsSuccess = FileUtility.imageCacheToPath(cachePath,image:data!)
                                 if !bIsSuccess
                                 {
-                                    println("*******cache fail,path=\(cachePath)")
+                                    print("*******cache fail,path=\(cachePath)")
                                 }
                             }
                     })

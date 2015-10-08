@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BCF61B4C-0418-4ECF-B63F-43F4FB9A89E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FirstSwift</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7E1BFB2FC1F824097752E6D42A07FDB4BEE63270</key>
+		<string>github.com:iStig/SwiftPractice_Joke.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FirstSwift.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7E1BFB2FC1F824097752E6D42A07FDB4BEE63270</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:iStig/SwiftPractice_Joke.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7E1BFB2FC1F824097752E6D42A07FDB4BEE63270</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7E1BFB2FC1F824097752E6D42A07FDB4BEE63270</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftJoke</string>
+		</dict>
+	</array>
+</dict>
+</plist>

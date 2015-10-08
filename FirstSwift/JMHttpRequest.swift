@@ -23,13 +23,13 @@ class JMHttpRequest: NSObject {
             {
                 dispatch_async(dispatch_get_main_queue(),
                     {
-                        println(error)
+                        print(error)
                         completionHandler(data:NSNull())
                 })
             }
             else {
             
-                let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                let jsonData = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
                 
                 dispatch_async(dispatch_get_main_queue(),
                     {

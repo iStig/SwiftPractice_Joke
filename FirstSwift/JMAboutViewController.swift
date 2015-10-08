@@ -18,7 +18,7 @@ class JMAboutViewController: UIViewController,UITableViewDelegate,UITableViewDat
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -44,8 +44,8 @@ class JMAboutViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     func setupViews() {
         
-        var width = UIScreen.mainScreen().bounds.size.width
-        var height = UIScreen.mainScreen().bounds.size.height
+        let width = UIScreen.mainScreen().bounds.size.width
+        let height = UIScreen.mainScreen().bounds.size.height
         self.tableView = UITableView(frame: CGRectMake(0, 64, width, height-64-49), style: UITableViewStyle.Plain)
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -58,7 +58,7 @@ class JMAboutViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
    // MARK: - UITableViewDataSource && UITableViewDelegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println(self.model.dataArray.count)
+        print(self.model.dataArray.count)
         return 5
     }
     
@@ -97,9 +97,9 @@ class JMAboutViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
 
         
-        var tempWidthConstraint:NSLayoutConstraint! = NSLayoutConstraint(item: JMSingleton.templateCell!.contentView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGRectGetWidth(self.tableView.bounds))
+        let tempWidthConstraint:NSLayoutConstraint! = NSLayoutConstraint(item: JMSingleton.templateCell!.contentView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGRectGetWidth(self.tableView.bounds))
         JMSingleton.templateCell?.addConstraint(tempWidthConstraint)
-        var height:CGFloat! = JMSingleton.templateCell?.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+        let height:CGFloat! = JMSingleton.templateCell?.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
 //        JMSingleton.templateCell?.removeConstraint(tempWidthConstraint)
         return height
     }

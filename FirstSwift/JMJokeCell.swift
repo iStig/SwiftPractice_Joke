@@ -23,19 +23,19 @@ class JMJokeCell: UITableViewCell {
     
         didSet {
         
-            var user:AnyObject? = self.data["user"]
+            let user:AnyObject? = self.data["user"]
             if let userDictOp:NSDictionary = user as? NSDictionary {
-                var userDict = userDictOp
+                let userDict = userDictOp
                 self.nickLabel.text = userDict["login"] as! String?
                 
-                var icon:AnyObject? = userDict["icon"]
+                let icon:AnyObject? = userDict["icon"]
                 if icon as! NSObject != NSNull()
                 {
-                    var userIcon = icon as! String
-                    var userId = userDict["id"] as! NSNumber
-                    var userstring:NSString = "\(userId)"
-                    var prefixUserID = userstring.substringToIndex(userstring.length - 4)
-                    var userImageUrl =  "http://pic.qiushibaike.com/system/avtnew/\(prefixUserID)/\(userstring)/medium/\(userIcon)"
+                    let userIcon = icon as! String
+                    let userId = userDict["id"] as! NSNumber
+                    let userstring:NSString = "\(userId)"
+                    let prefixUserID = userstring.substringToIndex(userstring.length - 4)
+                    let userImageUrl =  "http://pic.qiushibaike.com/system/avtnew/\(prefixUserID)/\(userstring)/medium/\(userIcon)"
                     self.avaterView.setImage(userImageUrl, placeHolder: UIImage(named: "avatar.jpg"))
                 }
                 else {
@@ -48,46 +48,46 @@ class JMJokeCell: UITableViewCell {
                 self.avaterView.image = UIImage(named: "avatar.jpg")
             }
             
-            var content = self.data.stringAttributeForKey("content")
+            let content = self.data.stringAttributeForKey("content")
  
             self.contentLabel.text = content
             
-            var imgSrc = self.data.stringAttributeForKey("image") as NSString
+            let imgSrc = self.data.stringAttributeForKey("image") as NSString
             if imgSrc.length == 0 {
 //                self.pictureView!.image = nil
 //                self.pictureView!.hidden = true
                 self.heightConstraints.constant = 0
                 
 //                self.contentLabel.addConstraint(self.verticalSpace);
-                print(content)
+                print(content, terminator: "")
             }else {
-                var imageID = self.data.stringAttributeForKey("id") as NSString
-                var prefiximageID = imageID.substringToIndex(imageID.length - 4)
+                let imageID = self.data.stringAttributeForKey("id") as NSString
+                let prefiximageID = imageID.substringToIndex(imageID.length - 4)
 //                self.pictureView!.hidden = false
                 self.heightConstraints.constant = 112
                 
 //                self.contentLabel.removeConstraint(self.verticalSpace);
-                var imagURL = "http://pic.qiushibaike.com/system/pictures/\(prefiximageID)/\(imageID)/small/\(imgSrc)"
+                let imagURL = "http://pic.qiushibaike.com/system/pictures/\(prefiximageID)/\(imageID)/small/\(imgSrc)"
                 self.pictureView!.setImage(imagURL, placeHolder: UIImage(named: "avatar.jpg"))
                 self.largeImageUrl = "http://pic.qiushibaike.com/system/pictures/\(prefiximageID)/\(imageID)/medium/\(imgSrc)"
                 
-                print(content)
-                print(imagURL)
+                print(content, terminator: "")
+                print(imagURL, terminator: "")
             }
             
-            var votes:AnyObject! = self.data["votes"]
+            let votes:AnyObject! = self.data["votes"]
             if votes as! NSObject == NSNull()
             {
                 self.likeLabel.text = "顶(0)"
                 self.dislikeLabel.text = "踩(0)"
             }else {
-                var votesDict = votes as! NSDictionary
-                var like = votesDict.stringAttributeForKey("up") as String
-                var dislike = votesDict.stringAttributeForKey("down") as String
+                let votesDict = votes as! NSDictionary
+                let like = votesDict.stringAttributeForKey("up") as String
+                let dislike = votesDict.stringAttributeForKey("down") as String
                 self.likeLabel.text = "顶\(like)"
                 self.dislikeLabel.text = "踩\(dislike)"
             }
-            var commentCount = self.data.stringAttributeForKey("comments_count") as String
+            let commentCount = self.data.stringAttributeForKey("comments_count") as String
             self.commentLabel.text = "评论\(commentCount)"
         }
     }
@@ -98,7 +98,7 @@ class JMJokeCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = UITableViewCellSelectionStyle.None
-        var tap =  UITapGestureRecognizer(target: self, action: "imageViewTapped:")
+        let tap =  UITapGestureRecognizer(target: self, action: "imageViewTapped:")
         self.pictureView!.addGestureRecognizer(tap)
        self.contentLabel?.preferredMaxLayoutWidth = UIScreen.mainScreen().bounds.width - 8 - 8
     }

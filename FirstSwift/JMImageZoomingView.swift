@@ -27,14 +27,14 @@ class JMImageZoomingView: UIScrollView,UIScrollViewDelegate {
         self.minimumZoomScale = 1
         self.maximumZoomScale = 3
         
-        var doubleTap = UITapGestureRecognizer(target: self, action: "doubleTapped:")
+        let doubleTap = UITapGestureRecognizer(target: self, action: "doubleTapped:")
         doubleTap.numberOfTapsRequired = 2
         self.addGestureRecognizer(doubleTap)
 
     }
     
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -43,7 +43,7 @@ class JMImageZoomingView: UIScrollView,UIScrollViewDelegate {
             self.setZoomScale(1.0, animated: true)
         }
         else {
-            var point = sender.locationInView(self)
+            let point = sender.locationInView(self)
             self.zoomToRect(CGRectMake(point.x-50, point.y - 50, 100, 100), animated: true)
         }
     }
